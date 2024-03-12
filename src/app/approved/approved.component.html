@@ -1,0 +1,127 @@
+<div class="toolbar bg-dark" role="banner">
+  <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+    <i class="bi bi-list-task"></i>
+  </button>
+</div>
+<div style="width: 150px;" class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header bg-dark text-white">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menus</h5>
+  </div>
+  <div class="offcanvas-body" >
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="">
+      <i class="bi bi-house-door"></i> Home
+    </div>
+    <!-- <div class="p-3 mb-2 text-white bg-dark" routerLink="/request">
+      <i class="bi bi-info-circle"></i> Request
+    </div> -->
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/approved">
+      <i class="bi bi-list"></i> Service User
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/profile">
+      <i class="bi bi-person"></i> Profile
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/service">
+      <i class="bi bi-gear"></i> Service
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/pay">
+      <i class="bi bi-credit-card"></i> Payments
+    </div>
+    <!-- <div class="p-3 mb-2 text-white bg-dark" routerLink="/test">
+      <i class="bi bi-gear"></i> test
+    </div> -->
+
+
+    <!-- <div class="p-3 mb-2 text-white bg-dark" routerLink="/uploadimage">
+      <i class="bi bi-gear"></i> upload image
+    </div> -->
+
+
+    <div class="p-3 mb-2 text-white bg-dark" (click)="logout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
+
+
+
+<div class="container mt-4" style="padding: 0 0 0 200px;">
+<div class="container">
+<h2>Connected Users</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>S.N.</th>
+      <th>User Id</th>
+      <th>Full Name</th>
+      <th>Mono</th>
+      <th>Email</th>
+      <th>Status</th>
+      <!-- <th>Action</th> -->
+      <th>Chat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of skk; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{s.user_id_user}}</td>
+      <td>{{s.user_name}} {{s.user_lname}}</td>
+      <td>{{s.user_c_code}}{{s.user_mono}}</td>
+      <td>{{s.user_email}}</td>
+ 
+      <td *ngIf="s.approval_status == '1'" >
+        <span style="color: green;" id="status1">Accpted</span>
+      </td>
+      <!-- <td><button class="btn btn-success" (click)="changeStatus(s,0)">Change Status</button></td> -->
+      <td><button class="btn btn-success" (click)="chat(s)">Chat Now</button></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+<!-- <div class="student-profile py-4">
+<div class="container">
+  <div class="row">
+   
+    <div class="col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-transparent border-0">
+                   </div>
+        
+        <div class="card-body pt-0">
+          <table class="table table-bordered">
+              <tr *ngFor="let s of skk">
+                  <td colspan="3"><strong>User Information</strong></td>
+              </tr>
+              <tr *ngFor="let s of skk">
+                  <th width="30%">User Name</th>
+                  <td width="2%">:</td>
+                  <td>{{s.user_name}} {{s.user_lname}}</td>
+              </tr>
+              <tr *ngFor="let s of skk">
+                  <th width="30%">Email</th>
+                  <td width="2%">:</td>
+                  <td>{{s.user_email}}</td>
+              </tr>
+              <tr *ngFor="let s of skk">
+                  <th width="30%">Mono</th>
+                  <td width="2%">:</td>
+                  <td>{{s.user_c_code}}{{s.user_mono}}</td>
+              </tr>
+              <tr *ngFor="let s of skk">
+                  <th width="30%">User Id</th>
+                  <td width="2%">:</td>
+                  <td>{{s.user_id_user}}</td>
+              </tr>
+          </table>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+
+</div>

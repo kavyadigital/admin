@@ -1,0 +1,4 @@
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+    --bs-offcanvas-padding-x: 0rem;
+    --bs-offcanvas-padding-y: 0rem;
+  }

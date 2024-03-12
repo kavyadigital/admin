@@ -1,0 +1,104 @@
+<div class="toolbar bg-dark" role="banner">
+    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+      <i class="bi bi-list-task"></i>
+    </button>
+  </div>
+  <div style="width: 150px;" class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menus</h5>
+    </div>
+    <div class="offcanvas-body" >
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="">
+        <i class="bi bi-house-door"></i> Home
+      </div>
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/service">
+        <i class="bi bi-list"></i>Users
+      </div>
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/business">
+        <i class="bi bi-list"></i>Business Users
+      </div>
+  
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/hotdeal">
+        <i class="bi bi-list"></i>Hot Deal
+      </div>
+  
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/wallet">
+        <i class="bi bi-list"></i>Wallet
+      </div>
+  
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/referral">
+        <i class="bi bi-list"></i>Referral
+      </div>
+  
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/trans">
+        <i class="bi bi-list"></i>Transaction
+      </div>
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/cards">
+        <i class="bi bi-list"></i>Cards
+      </div>
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/stores">
+        <i class="bi bi-list"></i>Store
+      </div>
+            <!-- /////////////////////////////////////////////////////////////////// -->
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/contact">
+  <i class="bi bi-list"></i>Contact Us
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/about">
+  <i class="bi bi-list"></i>About Us
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/worlflow">
+  <i class="bi bi-list"></i>Work Flow
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/socialmedia">
+  <i class="bi bi-list"></i>Social Media
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/newsNpress">
+  <i class="bi bi-list"></i>News & Press
+</div>
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/tutorial">
+  <i class="bi bi-list"></i>Tutorial
+</div>
+<!-- //////////////////////////////////////////////////////////////////////// -->
+
+  
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/profile">
+        <i class="bi bi-person"></i>Profile
+      </div>
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/setting">
+        <i class="bi bi-gear"></i> Settings
+      </div>
+     <div class="p-3 mb-2 text-white bg-dark" (click)="logout()">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </div>
+    </div>
+  </div>
+  
+    <br><br><br>
+  
+    <div class="container mt-4" style="padding: 0 0 0 100px;">
+      <h1 class="text-center">Contact Us</h1>
+   
+          <div class="mb-3 p-3">
+              <label for="number" class="form-label">Contact No</label>
+              <input type="number" id="number" class="form-control" name="number" required #number>
+          </div>
+          <div class="mb-3 p-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" name="email" required #email>
+          </div>
+        
+          <div class="mb-3 p-3">
+              <button type="submit" class="btn btn-primary" (click)="save(number,email)">
+                  <i class="fas fa-paper-plane"></i> Save
+              </button>
+          </div>
+
+  </div>
+
+
+
+

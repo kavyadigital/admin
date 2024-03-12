@@ -1,0 +1,68 @@
+<div class="toolbar bg-dark" role="banner">
+  <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+    <i class="bi bi-list-task"></i>
+  </button>
+</div>
+<div style="width: 150px;" class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header bg-dark text-white">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menus</h5>
+  </div>
+  <div class="offcanvas-body" >
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="">
+      <i class="bi bi-house-door"></i> Home
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/approved">
+      <i class="bi bi-list"></i> Service User
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/profile">
+      <i class="bi bi-person"></i> Profile
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/service">
+      <i class="bi bi-gear"></i> Service
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/pay">
+      <i class="bi bi-credit-card"></i> Payments
+    </div>
+
+
+    <div class="p-3 mb-2 text-white bg-dark" (click)="logout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </div>
+  </div>
+</div>
+
+<br> <br>
+
+<div class="container mt-4" style="padding: 0 0 0 200px;">
+<div class="chat-container">
+  <div class="chat-header">
+    <div style="text-align: end;">
+      <p> User Name :{{this.user_name}}</p>
+    </div>
+    <div style="text-align: start;">
+      <p style="position: absolute;top: 82px;">Butler Name:{{this.name_butler}}</p>
+    </div>
+  
+
+    <!-- <h2>Chat</h2> -->
+  </div>
+  <div class="chat-messages">
+    <!-- Messages will appear here -->
+    <div *ngFor="let s of skk">
+  
+      <p>{{s.butler_msg}}</p>
+      <p style="text-align: end;">{{s.user_msg}}</p>
+    </div>
+    
+  </div>
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="chat" placeholder="Type your message...">
+    <button (click)="chatchat(chat)">Send</button>
+  </div>
+</div>
+</div>
+  
+  
+  
+  

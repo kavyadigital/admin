@@ -1,0 +1,28 @@
+<div class="p-3 mb-2 bg-light text-white">
+    <div class="b">
+        <br>
+        <br>
+      <div class="container mt-5 mb-5">
+          <div class="col-lg-6 col-12">
+                 <div class="d">
+                  <h1 class="fw-lighter mt-1">Sign In</h1> 
+                  <br>  
+                  <!-- <input type="text" #email class="form-control" placeholder="Enter Your Email" (keyup.enter)="login(email.value, pass.value)"/> -->
+                     <input type="text" #email class="form-control" placeholder="Email/Username*" (keyup.enter)="login(email.value, pass.value)"/>
+                     <br>
+                     <input type="password" #pass  class="form-control" placeholder="Password*" (keyup.enter)="login(email.value, pass.value)"/>
+                     <br>
+                     <!-- <button class="btn btn-md btn-dark mt-3" (click)="login(email.value, pass.value)">Login</button> -->
+                     <!-- <button class="btn btn-md btn-primary mt-3" (click)="login(email.value, pass.value, 'admin')">Admin Sign In</button>
+                     &nbsp;  &nbsp;  &nbsp;  -->
+    
+                                    <button  class="btn btn-md btn-primary mt-3" (click)="login(email.value, pass.value)">Sign In</button>
+                 <br>
+                 <br>
+                                    <!-- <a  routerLink="/register">Butler Sign Up</a> -->
+                                </div>
+                  </div>
+         </div>
+     
+     </div>
+    </div>

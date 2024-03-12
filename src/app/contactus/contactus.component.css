@@ -1,0 +1,120 @@
+@media (max-width: 360px) {
+    .container {
+        padding: 0 15px!important;
+    }
+  }
+  
+  i{
+      font-size: 25px;
+  }
+  
+  .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+  
+      color: white;
+      font-weight: 600;
+    }
+  
+  
+  .services a {
+    text-decoration: none;
+  }
+  .services .service-box {
+    text-align: center;
+  }
+  .services .service-box h2 {
+    color: #222;
+    font-size: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+  }
+  .services a .service-box:hover h2 {
+    color: #FFF9A2;
+  }
+  .services .investor-box {
+      background-color: #FFF9A2;
+      background-position: center center;
+      padding: 20px;
+      width: 100%;
+      min-height: 150px;
+      display: block;
+      position: relative;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  .services .investor-box h2 {
+    font-size: 20px;
+  }
+  .services .investor-box .flip-view {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #FFF9A2;
+    left: -10%;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 333ms;
+  }
+  .services .investor-box a {
+    color: violet;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .services .investor-box:hover .flip-view {
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  .services {
+    padding: 50px 0;
+    background-color: #ffffff;
+  }
+  .ico_header {
+    color: #007BFF;
+  }
+  .investor-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  .investor-box:hover {
+    background-color: #f0f0f0;
+  }
+  .investor-box h2 {
+    color: #333;
+  }
+  .flip-view a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .flip-view a:hover {
+    color: #0056b3;
+  }
+  .fas {
+    font-size: 24px;
+    margin-left: 5px;
+  }
+  .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+    --bs-offcanvas-padding-x: 0rem;
+    --bs-offcanvas-padding-y: 0rem;
+  }
+  

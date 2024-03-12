@@ -1,0 +1,193 @@
+<div class="toolbar bg-dark" role="banner">
+  <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+    <i class="bi bi-list-task"></i>
+  </button>
+</div>
+<div style="width: 150px;" class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header bg-dark text-white">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menus</h5>
+  </div>
+  <div class="offcanvas-body" >
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="">
+      <i class="bi bi-house-door"></i> Home
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/service">
+      <i class="bi bi-list"></i>Users
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/business">
+      <i class="bi bi-list"></i>Business Users
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/hotdeal">
+      <i class="bi bi-list"></i>Hot Deal
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/wallet">
+      <i class="bi bi-list"></i>Wallet
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/referral">
+      <i class="bi bi-list"></i>Referral
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/trans">
+      <i class="bi bi-list"></i>Transaction
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/cards">
+      <i class="bi bi-list"></i>Cards
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/stores">
+      <i class="bi bi-list"></i>Store
+    </div>
+      <!-- /////////////////////////////////////////////////////////////////// -->
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/contact">
+        <i class="bi bi-list"></i>Contact Us
+      </div>
+      
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/about">
+        <i class="bi bi-list"></i>About Us
+      </div>
+      
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/worlflow">
+        <i class="bi bi-list"></i>Work Flow
+      </div>
+      
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/socialmedia">
+        <i class="bi bi-list"></i>Social Media
+      </div>
+      
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/newsNpress">
+        <i class="bi bi-list"></i>News & Press
+      </div>
+      <div class="p-3 mb-2 text-white bg-dark" routerLink="/tutorial">
+        <i class="bi bi-list"></i>Tutorial
+      </div>
+      <!-- //////////////////////////////////////////////////////////////////////// -->
+      
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/profile">
+      <i class="bi bi-person"></i>Profile
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/setting">
+      <i class="bi bi-gear"></i> Settings
+    </div>
+   <div class="p-3 mb-2 text-white bg-dark" (click)="logout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </div>
+  </div>
+</div>
+  
+  <br><br><br>
+
+  <div class="container mt-4" style="padding: 0 0 0 200px;">
+    <input type="text" placeholder="Search..." name="searchTerm" [(ngModel)]="searchTerm" />
+    <button type="submit" (click)="search(searchTerm)">Search</button>
+    <h1 class="text-center">List of Users</h1>
+  
+    <div class="row mt-3">
+      <div class="col-md-8">
+        <!-- <input type="text" #key class="form-control" id="search-bar" placeholder="Search for users..."> -->
+      </div>
+      <!-- <div class="col-md-4 text-end">
+              <button class="btn btn-primary" id="add-user-button" (click)="adduser()">
+                  <i class="fas fa-user-plus me-2"></i> Add User
+              </button>
+          </div> -->
+    </div>
+  
+    <div class="row">
+      <!-- <div class="col-md-1 "></div> -->
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="col-md-3 bg-light" *ngIf="editusershow">
+    <br>
+    <h3 style="text-align: center;">Edit User</h3>
+    <div class="form-group">
+      <input disabled="true" id="number" name="number"  [(ngModel)]="user_id1" type="number" class="form-control" placeholder="Number" required>
+    </div>
+
+    <div class="form-group">
+      <input id="name" name="name"  [(ngModel)]="name1" type="text" class="form-control" placeholder="name of user" required>
+    </div>
+
+    <div class="form-group">
+      <input id="lname" name="lname"  [(ngModel)]="last_name1" type="text" class="form-control" placeholder="last name of user" required>
+    </div>
+    <div class="form-group">
+      <input id="email" name="email"  [(ngModel)]="email1" type="email" class="form-control" placeholder="Email" required>
+    </div>
+
+    <div class="form-group">
+      <input id="number" name="number"  [(ngModel)]="mono1" type="number" class="form-control" placeholder="Number" required>
+    </div>
+
+    <div class="form-group">
+      <input id="password" name="password" [(ngModel)]="password1" type="password" class="form-control" placeholder="Password"
+        required>
+    </div>
+ 
+
+    <div class="form-group">
+      <input id="address" name="address" [(ngModel)]="address1" type="text" class="form-control" placeholder="Address"
+        required>
+    </div>
+    <div class="form-group">
+      <input id="city" name="city" [(ngModel)]="city1" type="text" class="form-control" placeholder="city"
+        required>
+    </div>
+
+    <div class="form-group">
+      <input id="state" name="state" [(ngModel)]="state1" type="text" class="form-control" placeholder="State"
+        required>
+    </div>
+
+
+    <button type="submit"  class="btn btn-primary" (click)="update(user_id1,name1,last_name1,email1,mono1,password1,address1,city1,state1)">Update</button>
+  </div>
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <div class="col-md-9">
+        <table class="table mt-4">
+          <thead>
+            <tr>
+              <th>S.N.</th>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <!-- <th>Date</th> -->
+              <th>Actions</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: 12px;font-weight: 600;">
+            <!-- |filter : key.value -->
+            <tr *ngFor="let user of listofuser; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{user.user_id}}</td>
+              <td>{{user.name}} {{user.last_name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.mobile}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.city}}</td>
+              <td>{{user.state}}</td>
+              <!-- <td>{{user.created | date}}</td> -->
+              <td class="actions">
+                <i class="fas fa-edit me-2" style="font-size: 20px;" (click)="edituser(user)"></i>
+                <i class="fas fa-trash-alt"  style="font-size: 20px;" (click)="deleteuser(user)"></i> <!-- Delete icon -->
+              </td>
+              <td>
+                <ng-container *ngIf="user.status == 1">
+                  <button class="btn btn-success" >Active</button>
+                </ng-container> 
+                <ng-container *ngIf="user.status == 0">
+                  <button class="btn btn-danger">Not Active</button>
+                </ng-container>
+              </td>
+            </tr>
+  
+            <!-- Add more user rows as needed -->
+          </tbody>
+        </table>
+      </div>
+       </div>

@@ -1,0 +1,148 @@
+<div class="toolbar bg-dark" role="banner">
+  <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+    <i class="bi bi-list-task"></i>
+  </button>
+</div>
+<div style="width: 150px;" class="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header bg-dark text-white">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menus</h5>
+  </div>
+  <div class="offcanvas-body" >
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="">
+      <i class="bi bi-house-door"></i> Home
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/service">
+      <i class="bi bi-list"></i>Users
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/business">
+      <i class="bi bi-list"></i>Business Users
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/hotdeal">
+      <i class="bi bi-list"></i>Hot Deal
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/wallet">
+      <i class="bi bi-list"></i>Wallet
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/referral">
+      <i class="bi bi-list"></i>Referral
+    </div>
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/trans">
+      <i class="bi bi-list"></i>Transaction
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/cards">
+      <i class="bi bi-list"></i>Cards
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/stores">
+      <i class="bi bi-list"></i>Store
+    </div>
+
+    <!-- /////////////////////////////////////////////////////////////////// -->
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/contact">
+<i class="bi bi-list"></i>Contact Us
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/about">
+<i class="bi bi-list"></i>About Us
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/worlflow">
+<i class="bi bi-list"></i>Work Flow
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/socialmedia">
+<i class="bi bi-list"></i>Social Media
+</div>
+
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/newsNpress">
+<i class="bi bi-list"></i>News & Press
+</div>
+<div class="p-3 mb-2 text-white bg-dark" routerLink="/tutorial">
+  <i class="bi bi-list"></i>Tutorial
+</div>
+<!-- //////////////////////////////////////////////////////////////////////// -->
+
+
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/profile">
+      <i class="bi bi-person"></i>Profile
+    </div>
+    <div class="p-3 mb-2 text-white bg-dark" routerLink="/setting">
+      <i class="bi bi-gear"></i> Settings
+    </div>
+   <div class="p-3 mb-2 text-white bg-dark" (click)="logout()">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </div>
+  </div>
+</div>
+
+  <br><br><br>
+
+  <div class="container mt-4" style="padding: 0 0 0 150px;">
+    <h1 class="text-center">List of News & Press</h1>
+  
+    <div class="row mt-3">
+      <div class="col-md-8">
+        <!-- <input type="text" #key class="form-control" id="search-bar" placeholder="Search for users..."> -->
+      </div>
+      <!-- <div class="col-md-4 text-end">
+              <button class="btn btn-primary" id="add-user-button" (click)="adduser()">
+                  <i class="fas fa-user-plus me-2"></i> Add User
+              </button>
+          </div> -->
+    </div>
+  
+    <div class="row">
+      <div class="col-md-3 bg-light" *ngIf="addusershow">
+        <br>
+        <h3 style="text-align: center;">Add News & Press</h3>
+        <br>
+        <div class="form-group">
+          <input id="title" name="title" #title type="text" class="form-control" placeholder="Enter Title" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <input id="descriton" name="descriton" #description type="text" class="form-control" placeholder="Enter Description" required>
+        </div>
+        <br>
+       
+        <!-- <div class="form-group">
+          <input id="file" name="file" type="file" (change)="onFileSelected($event)" class="form-control" accept="image/*" required>
+        </div>
+        <br> -->
+        <button type="submit"  class="btn btn-primary" (click)="adduser(title,description)">Save</button>
+      </div>
+      <!-- <div class="col-md-1 "></div> -->
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="col-md-3 bg-light" *ngIf="editusershow">
+   
+  </div>
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <div class="col-md-9">
+        <table class="table mt-4">
+          <thead>
+            <tr>
+              <th>S.N.</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- |filter : key.value -->
+            <tr *ngFor="let user of listofuser; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{user.title}}</td>
+              <td>{{user.ds}}</td>
+              <td class="actions">
+                <!-- <i class="fas fa-edit me-2" (click)="edituser(user)"></i> -->
+                <i class="fas fa-trash-alt" (click)="deleteuser(user)"></i> <!-- Delete icon -->
+              </td>
+            </tr>
+  
+          </tbody>
+        </table>
+      </div>
+       </div>
